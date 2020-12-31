@@ -1,0 +1,159 @@
+<%- include("partials/header") %>
+
+<div class="wrapper">
+    <div class="container">
+        <%- include("partials/alert") %>
+        <%- include("partials/navbar") %>
+        <!-- MAIN START -->
+        <main>
+
+            <div id="b-main__upload">
+                <h2>Upload an image</h2>
+                <div id="b-main__upload__droparea">
+                    <section id="drop_area">
+                        <div class="b-main__upload__icon">
+                            <svg viewBox="0 0 76.626 63.206">
+                                <g transform="translate(1.512 1.511)">
+                                    <g>
+                                        <path d="M38.757,31.378,25.378,18,12,31.378"
+                                            transform="translate(11.43 12.094)" fill="none" stroke="#2b3137"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                        <path d="M18,18V48.1" transform="translate(18.809 12.094)" fill="none"
+                                            stroke="#2b3137" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="3"></path>
+                                        <path
+                                            d="M66.362,55.969a16.723,16.723,0,0,0-7.994-31.406H54.154A26.757,26.757,0,1,0,8.2,48.979"
+                                            transform="translate(-1.492 -4.503)" fill="none" stroke="#2b3137"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                        <path d="M38.757,31.378,25.378,18,12,31.378"
+                                            transform="translate(11.43 12.094)" fill="none" stroke="#2b3137"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <input type="file" name="file" id="file" required>
+                        <label class="b-main__upload__button" for="file">Drag and Drop your image here 
+                            <span id="or">Or</span>
+                            <span id="underline">Browse</span>
+                        </label>
+
+                    </section>
+                    <section id="temp_image">
+                        <img id="temp_image_src" src="" alt="">
+                        <button id="delete">
+                            <i class="icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10.301" height="13.245"
+                                    viewBox="0 0 10.301 13.245">
+                                    <path id="Icon_material-delete" data-name="Icon material-delete"
+                                        d="M8.236,16.273a1.476,1.476,0,0,0,1.472,1.472h5.886a1.476,1.476,0,0,0,1.472-1.472V7.443H8.236ZM17.8,5.236H15.226L14.49,4.5H10.811l-.736.736H7.5V6.707H17.8Z"
+                                        transform="translate(-7.5 -4.5)" />
+                                </svg>
+                            </i>
+                            Delete
+                        </button>
+                    </section>
+                </div>
+                <div class="b-main__upload__width">
+                    <label for="image_width">Characters per line<br><span>Min-50 | Max-200</span></label>
+                    <input id="image_width" type="number" min="50" max="200" value="100" required>
+                    <div class="b-main__upload__width__buttons__container">
+                        <button id="num-down">-</button>
+                        <button id="num-up" />+</button>
+                    </div>
+                </div>
+                <div class="b-main__upload__convert">
+                    <div id="loader" class="off">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                        <div class="dot dot4"></div>
+                        <div class="dot dot5"></div>
+                      </div>                    
+                      <button id="convert" class="convertOn" type="button">
+                        <i class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="18.546" height="12.028" viewBox="0 0 18.546 12.028">
+                                <defs>
+                                    <clipPath id="clip-path">
+                                        <rect id="Rectangle_29" data-name="Rectangle 29" width="6.003"
+                                            height="2.916"/>
+                                    </clipPath>
+                                    <clipPath id="clip-path-2">
+                                        <path id="Path_35" data-name="Path 35"
+                                            d="M30.692,0V3.28L37.81,6.025,30.692,8.769v3.259l10.72-4.481V4.46Z"
+                                            transform="translate(-30.692 0)"/>
+                                    </clipPath>
+                                </defs>
+                                <g id="Group_137" data-name="Group 137" transform="translate(0 0)">
+                                    <g id="Group_134" data-name="Group 134" transform="translate(0 4.556)">
+                                        <g id="Group_133" data-name="Group 133" clip-path="url(#clip-path)">
+                                            <rect id="Rectangle_28" data-name="Rectangle 28" width="6.003"
+                                                height="2.916" transform="translate(0)"/>
+                                        </g>
+                                    </g>
+                                    <g id="Group_136" data-name="Group 136" transform="translate(7.826 0)">
+                                        <g id="Group_135" data-name="Group 135" clip-path="url(#clip-path-2)">
+                                            <rect id="Rectangle_30" data-name="Rectangle 30" width="10.72"
+                                                height="12.028" transform="translate(0)"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </i>
+                        Convert
+                    </button>
+                </div>
+            </div>
+            <div id="b-main__output">
+
+            <p>Hover or Tap to view download options</p>
+            <div id="b-main__output__block__container">
+                <div id="b-main__output__download">
+                    <h4>Download as</h4>
+
+                    <div class="b-main__output__download-container jpg">
+                        <a id="jpg" target="_blank" download>
+                            <i class="icon">
+                                <svg width="20.98" height="20.98" viewBox="0 0 20.98 20.98">
+                                    <path
+                                        d="M25.48,23.149V6.831A2.338,2.338,0,0,0,23.149,4.5H6.831A2.338,2.338,0,0,0,4.5,6.831V23.149A2.338,2.338,0,0,0,6.831,25.48H23.149A2.338,2.338,0,0,0,25.48,23.149Zm-14.57-6.411,2.914,3.508L17.9,14.99l5.245,6.993H6.831Z"
+                                        transform="translate(-4.5 -4.5)"/>
+                                </svg>
+                            </i>
+                            Image
+                        </a>
+                    </div>
+                    <div class="b-main__output__download-container text">
+                        <a id="text" target="_blank" download>
+                            <i class="icon">
+                                <svg width="18.5" height="18.5" viewBox="0 0 18.5 18.5">
+                                    <path d="M0,0V4.625H1.156A2.319,2.319,0,0,1,3.469,2.313H6.938V15.031a1.145,1.145,0,0,1-1.156,1.156H4.625V18.5h9.25V16.188H12.719a1.145,1.145,0,0,1-1.156-1.156V2.313h3.469a2.319,2.319,0,0,1,2.313,2.313H18.5V0Z"/>
+                                </svg>
+                            </i>
+                            Text
+                        </a>
+                    </div>
+                </div>
+                <pre id="b-main__output__block">
+
+                </pre>
+            </div>
+                <div id="b-main__output__return">
+                    <button id="main__output__return__btn">
+                        <i class="icon">
+                            <svg width="17.687" height="12.485" viewBox="0 0 17.687 12.485">
+                                <path
+                                    d="M20.687,14.2H6.985l3.725-3.735L9.242,9,3,15.242l6.242,6.242,1.467-1.467L6.985,16.283h13.7Z"
+                                    transform="translate(-3 -9)"/>
+                            </svg>
+                        </i>
+                    </button>
+                    <img id="main__output__return__preview" src="" alt="">
+                </div>
+            </div>
+        </main>
+        <!-- MAIN END -->
+
+<%- include("partials/footer") %>

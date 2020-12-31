@@ -1,0 +1,49 @@
+/* Layout */
+@mixin flex($direction) {
+    display: flex;
+    flex-flow: $direction wrap;
+}
+@mixin flex-important($direction) {
+    display: flex !important;
+    flex-flow: $direction wrap !important;
+}
+@mixin flex-nowrap($direction) {
+    display: flex;
+    flex-flow: $direction no-wrap;
+}
+@mixin inline-flex() {
+    display: inline-flex;
+}
+@mixin justify($arg) {
+    justify-content: $arg;
+}
+@mixin align($arg) {
+    align-items: $arg;
+}
+
+/* Input */
+@mixin border-radius($arg) {
+    border-radius: $arg;
+}
+
+// A map of breakpoints.
+$breakpoints: (
+  small: 570px,
+  medium: 767px,
+  large: 1025px,
+);
+
+@mixin for-size($breakpoint) {
+
+// If the breakpoint exists in the map.
+@if map-has-key($breakpoints, $breakpoint) {
+
+        // Get the breakpoint value.
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        //Build the media query
+        @media (max-width: $breakpoint-value) {
+            @content;
+        }
+    } 
+}

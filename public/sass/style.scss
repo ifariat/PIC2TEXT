@@ -1,0 +1,1176 @@
+@import "mixins";
+@import "variables";
+@import "animations";
+
+
+// /* General styles */
+
+// scroll bar 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @include border-radius(6px);
+  background: $hover-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $block-color;
+  @include border-radius(6px);
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.button {
+  padding: .6rem 2rem;
+  @include border-radius(6px);
+  color: $text-color;
+
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+
+  &:hover {
+    background-color: $hover-color;
+    transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $white-color;
+  line-height: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+::selection {
+  background-color: $primary-color;
+  color: $white-color;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.2rem;
+  touch-action: manipulation;
+}
+
+body {
+  @include flex(row);
+  @include justify(center);
+  background-color: $primary-color;
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 13px;
+  color: $text-color;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.2px;
+  // ** important for accessibility ** //
+  // input[type="button"]:focus {
+  //   /* your custom focused styles here */
+  // }
+}
+
+// ** Extended classes  ** // 
+.button-base-md {
+  @include inline-flex();
+  @include align(center);
+  @include border-radius(6px);
+  align-self: flex-start;
+  color: $white-color;
+  font-size: .78rem;
+  border: 2px solid $block-hover;
+  padding: .5rem 1.1rem;
+  font-weight: bold;
+  background: none;
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  &:hover {
+    border: 2px solid $accent-color;
+    box-shadow: 0px 0px 20px 0px $accent-color-shade;
+    cursor: pointer;
+  }
+
+  i {
+    @include flex(column);
+    @include align(center);
+    @include justify(center);
+    margin-right: .8rem;
+    svg {
+      height: 14px;
+      fill: $block-hover;
+    }
+  }
+
+  @include for-size(medium) {
+    padding: 0.7rem 1.9rem;
+  }
+}
+
+.button-base-lg {
+  @extend .button-base-md;
+  padding: 0.8rem 1.5rem;
+}
+
+.button-base-sm {
+  @extend .button-base-md;
+  padding: .2rem 1rem;
+}
+
+.input-base {
+  color: $white-color;
+  font-weight: bold;
+  background: $block-color;
+  border: 2px solid $block-color;
+  height: 40px;
+  @include border-radius(6px);
+  padding: 1.3rem 1rem;
+  cursor: text;
+  font-size: .75rem;
+
+  &:hover {
+    cursor: text;
+  }
+}
+
+.button-nav {
+  @include flex(column);
+  @include align(center);
+  @include justify(center);
+  width: 50px;
+  height: 50px;
+
+  @include border-radius(50%);
+  margin-left: .6rem;
+  background: none;
+  border: none;
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+
+  &:hover {
+    background: $hover-color;
+    transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Wrapper styles */
+
+.wrapper {
+  padding-top: 1.5rem;
+  @include flex(column);
+  @include justify(center);
+  @include align(center);
+  width: 100%;
+
+  .container {
+    @include flex(row);
+    @include justify(center);
+    width: calc(100% - 30px);
+    max-width: 1364px;
+
+    /* HEADER START */
+    .b-header {
+      width: 100%;
+      @include flex(row);
+      @include align(center);
+      @include justify(space-between);
+
+      .b-header__brand {
+        .icon__text {
+          fill: $white-color;
+        }
+
+        .icon svg {
+          width: 100px;
+        }
+      }
+
+      .b-header__nav {
+        @include flex(row);
+        @include align(center);
+        @include justify(center);
+
+        @include for-size(small) {
+          display: none;
+        }
+
+        ul {
+          @include flex(row);
+          @include align(center);
+          @include justify(center);
+
+          li {
+            @include flex(column);
+            @include align(center);
+            @include justify(center);
+
+            a {
+              color: $white-color;
+              padding: .5rem 2rem;
+              margin-left: .6rem;
+              font-size: .78rem;
+              font-weight: bold;
+              @include border-radius(6px);
+              transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+
+              &:hover {
+                background: $block-color;
+                transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+              }
+            }
+
+            button {
+              @extend .button-nav;
+
+              &:hover {
+                background: $block-color;
+              }
+            }
+          }
+        }
+      }
+
+      #burger-menu {
+
+        background: $hover-color;
+        padding: 0.8rem 0.9rem;
+        display: none;
+        @include border-radius(6px);
+
+        @include for-size(small) {
+          @include flex(column);
+          @include justify(center);
+          @include align(center);
+        }
+
+        svg {
+          width: 22px;
+          fill: $white-color;
+        }
+      }
+
+      #mobile {
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        display: none;
+        margin-top: 1rem;
+        @include border-radius(6px);
+
+        @include for-size(small) {
+          @include flex(column);
+        }
+
+        ul {
+          @include justify(center);
+          @include flex(column);
+          @include align(center);
+          @include border-radius(6px);
+          width: 100%;
+          padding: .5rem;
+          background: $block-color;
+
+          li {
+            width: 100%;
+            @include border-radius(6px);
+            @include justify(center);
+            @include flex(column);
+            @include align(center);
+
+            a {
+              color: $white-color;
+              width: 100%;
+              @include flex(column);
+              @include justify(center);
+              @include align(center);
+              @include border-radius(6px);
+              padding: .7rem 0;
+
+              &:hover {
+                background: $block-hover;
+              }
+            }
+
+            button {
+              @extend .button-nav;
+              @include border-radius(6px);
+              width: 100%;
+              margin: 0;
+              height: 41px;
+
+              &:hover {
+                background: $block-hover;
+              }
+            }
+
+            svg {
+              width: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    /* HEADER END */
+
+    /* MAIN START */
+    main {
+      margin: 2rem 0;
+      @include flex(column);
+      @include align(center);
+      @include justify(center);
+      width: 100%;
+
+      #b-main__upload {
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+        background: $block-color;
+        padding: 3rem 2rem;
+        @include border-radius(6px);
+        @include flex(column);
+        @include justify(center);
+        @include align(center);
+
+        @include for-size(small) {
+          padding: 2.5rem 1rem;
+        }
+
+        h2 {
+          margin-bottom: 2rem;
+        }
+
+        #b-main__upload__droparea {
+          @include border-radius(6px);
+          border: 1px dashed $block-hover;
+          padding: 2rem 0;
+          background: $primary-color;
+          @include flex(column);
+          @include justify(center);
+          @include align(center);
+          width: 100%;
+
+          #file {
+            display: none;
+          }
+
+          .b-main__upload__icon {
+            margin-bottom: 1rem;
+
+            svg {
+              width: 60px;
+            }
+          }
+
+          #underline {
+            @extend .button-base-sm;
+            background: $block-color;
+            border: 2px solid $block-color;
+            font-weight: bold;
+            margin-top: .4rem;
+            align-self: center;
+
+            &:hover {
+              background: $block-hover;
+              border: 2px solid $block-hover;
+              box-shadow: none;
+            }
+          }
+
+          #or {
+            margin-top: .4rem;
+            color: $block-hover;
+          }
+
+          .b-main__upload__button {
+            font-size: 14px;
+            @include flex(column);
+            @include justify(center);
+            @include align(center);
+          }
+
+          &.highlight {
+            border: 1px dashed $accent-color;
+          }
+
+          #drop_area {
+            @include flex(column);
+            @include justify(center);
+            @include align(center);
+          }
+
+          #temp_image {
+            display: none;
+            @include justify(center);
+            @include align(center);
+
+            img {
+              @include border-radius(4px);
+              margin-bottom: 1rem;
+              width: 100%;
+              max-width: 100px
+            }
+
+            button {
+              @extend .button-base-md;
+              padding: 0.3rem 0.8rem;
+              font-size: 11px;
+              font-weight: bold;
+              background: $accent-color-bg;
+              border: 2px solid $accent-color-bg;
+              color: $accent-color;
+              align-self: center;
+              &:hover {
+                box-shadow: unset;
+              }
+
+              i {
+                svg {
+                  fill: $accent-color;
+                  transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+                }
+              }
+
+            }
+          }
+        }
+
+        .b-main__upload__width {
+          @include flex(row);
+          @include justify(center);
+          @include align(center);
+          @include border-radius(6px);
+          padding: 0 5px;
+          position: relative;
+          text-align: center;
+          width: 100%;
+          max-width: 140px;
+          margin: 2rem 0;
+          input {
+            background: $primary-color;
+            border: 2px solid $block-hover;
+            @extend .input-base;
+            width: 100%;
+            padding: 0 1rem;
+          }
+
+          label {
+            width: 100%;
+            margin-bottom: .6rem;
+            font-size: 12px;
+
+            span {
+              font-size: .8em;
+            }
+          }
+
+          .b-main__upload__width__buttons__container {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+
+            button {
+              font-size: 1.1rem;
+              width: 30px;
+              height: 30px;
+              background: $block-hover;
+              border: none;
+              @include border-radius(6px);
+              color: $white-color;
+              border: 1px solid $block-hover;
+              transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+
+              &:hover {
+                border: 1px solid $dashed-color;
+                background: $dashed-color;
+                transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+              }
+
+              cursor: pointer;
+            }
+          }
+        }
+
+        .b-main__upload__convert {
+          #convert {
+            @extend .button-base-md;
+            transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+
+            &:hover {
+              background: $accent-color;
+              box-shadow: 0px 0px 20px 0px $accent-color-shade;
+              border: 2px solid $accent-color;
+              transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+              svg {
+                fill: $white-color !important;
+              }
+            }
+          }
+        }
+      }
+
+      #b-main__output {
+        display: none;
+        @include justify(center);
+        @include align(center);
+        width: 100%;
+        overflow: hidden;
+        p {
+          margin-bottom: 2rem;
+          font-size: 0.7rem;
+        }
+        #b-main__output__block__container {
+          @include flex(column);
+          @include justify(center);
+          @include align(center);
+          position: relative;
+
+          @include border-radius(6px);
+          border: 2px solid $block-hover;
+          padding: .5rem;
+          @include for-size(small) {
+            overflow-x: scroll;
+            width: 100%;
+          }
+          #b-main__output__block {
+            color: $white-color;
+            letter-spacing: -.6px;
+            line-height: 0.51rem;
+            position: relative;
+            font-size: 7.6px;
+            transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+          }
+
+          #b-main__output__download {
+            opacity: 0;
+            @include flex(column);
+            @include justify(center);
+            @include align(center);
+            @include border-radius(6px);
+            width: 90%;
+            padding: 2em 4em;
+            background-color: $transparent-dark;
+            position: absolute;
+            z-index: 2;
+
+            h4 {
+              text-align: center;
+              width: 100%;
+              margin-bottom: 1rem;
+              line-height: 1.3rem;
+              font-size: 14px;
+            }
+
+            .b-main__output__download-container {
+              @include flex-nowrap(column);
+              @include justify(center);
+              margin-bottom: .5rem;
+              width: 100%;
+
+              a {
+                @include flex(row);
+                @include justify(center);
+                @include align(center);
+
+                @include for-size(medium) {
+                  padding: 0.4rem 0.9rem;
+                }
+
+                width: 100%;
+                max-width: 150px;
+
+                svg {
+                  fill: $white-color !important;
+                }
+
+                @extend .button-base-md;
+
+                &:hover {
+                  background: $accent-color;
+                }
+
+                background: $block-hover;
+              }
+            }
+          }
+        }
+
+
+        #b-main__output__return {
+          @include flex(row);
+          @include justify(center);
+          @include align(center);
+          margin-top: 3rem;
+          width: 100%;
+
+          button {
+            @include flex(column);
+            @include justify(center);
+            @include align(center);
+            padding: 0;
+            @include for-size(medium) {
+              padding: 0 !important;
+            }
+
+            @extend .button-base-md;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: auto 1.5em;
+
+            svg {
+              fill: $white-color !important;
+            }
+
+            i {
+              margin-right: 0 !important;
+            }
+          }
+
+          img {
+            @include border-radius(4px);
+            width: 100%;
+            max-width: 60px;
+          }
+        }
+      }
+    }
+
+    /* MAIN END */
+
+    /* FOOTER START */
+    footer {
+      @include for-size(medium) {
+        @include flex(column);
+      }
+
+      &:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $hover-color;
+        margin: 2rem 0;
+
+        @include for-size(small) {
+          margin: unset;
+          margin-bottom: 2rem;
+        }
+      }
+
+      @include flex(row);
+      width: 100%;
+
+      .b-footer__brand {
+        @include for-size(medium) {
+          width: 100%;
+          order: 2;
+          padding-top: 2rem;
+        }
+
+        width: 30%;
+
+        .icon {
+          @include flex(column);
+          @include align(center);
+          @include justify(center);
+          width: 100%;
+          height: 100%;
+
+          svg {
+            fill: $block-color;
+            width: 100px;
+
+            @include for-size(medium) {
+              width: 50px;
+            }
+          }
+        }
+      }
+
+      .b-footer__cards {
+        @include for-size(medium) {
+          width: 100%;
+        }
+
+        width: 70%;
+        @include flex(row);
+        @include align(center);
+        @include justify(space-evenly);
+
+        .b-footer__card {
+          background: $block-color;
+
+          @include for-size(medium) {
+            width: 100%;
+            height: auto;
+            min-height: unset;
+            padding: 2rem;
+            order: 1;
+
+            p {
+              width: 87%;
+
+              @include for-size(small) {
+                width: unset;
+              }
+            }
+
+            &:nth-child(1) {
+              margin-bottom: 1rem;
+            }
+          }
+
+          @include flex(column);
+          @include justify(space-between);
+          width: calc(50% - 40px);
+          height: 100%;
+          min-height: auto;
+          padding: 2rem;
+          @include border-radius(6px);
+
+          h3 {
+            margin-bottom: 1rem;
+          }
+
+          p {
+            margin-bottom: 1.3rem;
+          }
+
+          a {
+            @extend .button-base-md;
+
+            &:hover {
+              svg {
+                fill: $white-color;
+              }
+            }
+          }
+        }
+      }
+
+      .b-footer__copyright {
+        @include for-size(medium) {
+          order: 2;
+        }
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: $hover-color;
+          margin-top: 2rem;
+        }
+
+        @include flex(column);
+        @include justify(center);
+        @include align(center);
+        width: 100%;
+
+        p {
+          padding: 1rem 0;
+        }
+      }
+    }
+
+    /* FOOTER END */
+  }
+}
+
+/* CONTACT START */
+main {
+  #b-main__contact__form {
+    @include flex(row);
+    @include align(center);
+    @include justify(center);
+    width: 100%;
+
+    #b-main__contact__left {
+      @include for-size(medium) {
+        width: 100%;
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      @include for-size(small) {
+        width: 100%;
+        margin: 0 0 3rem 0;
+      }
+
+      width: 40%;
+      padding: 2rem;
+      @include flex(row);
+      @include align(center);
+      @include justify(center);
+
+      .b-main__contact__left__display {
+        width: 100%;
+        p {
+          margin-top: 1rem;
+          width: 100%;
+          max-width: 300px;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .b-main__contact__left__refrences {
+        width: 100%;
+        @include flex(row);
+        @include align(center);
+
+        p {
+          margin: 1rem 0;
+        }
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: $hover-color;
+          margin: 1rem 0;
+        }
+
+        a {
+          @include border-radius(6px);
+          @extend .button-base-sm;
+          background: $block-color;
+          border: 2px solid $block-color;
+          svg {
+            fill: $block-hover;
+            transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+          }
+          &:hover {
+            background: $block-hover;
+            border: 2px solid $block-hover;
+            box-shadow: none;
+            svg {
+              fill: $white-color;
+              transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+            }
+          }
+        }
+
+        .developer {
+          @include flex(column);
+          @include align(flex-start);
+          @include justify(center);
+          margin-right: 1rem;
+          @include for-size(small) {
+            width: 100%;
+          }
+        }
+
+        .source_code {
+          @include for-size(small) {
+            width: 100%;
+            margin-left: 0;
+          }
+
+        }
+      }
+    }
+
+    #b-main__contact__right {
+      @include for-size(medium) {
+        width: 100%;
+        padding: 1.8rem;
+      }
+
+      @include for-size(small) {
+        padding: 1.6rem;
+      }
+
+      width: 40%;
+      @include flex(row);
+      @include align(flex-start);
+      @include justify(space-between);
+      @include border-radius(6px);
+      background: $block-color;
+      padding: 2rem;
+
+      input,
+      textarea {
+        @extend .input-base;
+        background: $primary-color;
+        border: 2px solid $block-hover;
+        width: 100%;
+
+        @include for-size(small) {
+          padding: 1.5rem;
+        }
+      }
+
+      input {
+        @include for-size(medium) {
+          &:nth-child(1) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      textarea {
+        width: 100%;
+        height: 150px;
+        padding: 1rem;
+        font-family: inherit;
+        resize: none;
+
+        @include for-size(medium) {
+          margin: 1rem 0;
+        }
+      }
+
+      button {
+        @extend .button-base-md;
+        margin-top: 1.5rem;
+
+        @include for-size(medium) {
+          margin-top: 1.5rem;
+        }
+
+        &:hover {
+          background: $accent-color;
+
+          svg {
+            fill: $white-color !important;
+          }
+        }
+      }
+
+      .b-main__contact__right_input {
+        @include flex(column);
+        @include align(flex-start);
+        width: 48%;
+        position: relative;
+        @include for-size(large) {
+          width: 100%;
+          &:nth-child(2) {
+            margin-top: 3rem;
+          }
+        }
+
+        label {
+          margin-bottom: .7rem;
+          font-size: .78rem;
+        }
+
+        &:nth-child(3) {
+          width: 100%;
+          margin: 3rem 0;
+        }
+      }
+      .field_error {
+        display: none;
+        position: relative;
+        padding: .4em 1.6em .4em .9em;
+        font-size: .9em;
+        background: $accent-color-bg;
+        color: $accent-color;
+        position: absolute;
+        bottom: -40px;
+        @include border-radius(6px);
+        margin-top: .7rem;
+        .field_error_arrow {
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid $accent-color-bg;
+          position: absolute;
+          top: -5px;
+          left: 18px;
+        }
+        i {
+          @include flex(row);
+          @include align(center);
+          @include justify(center);
+          margin-right: .2rem;
+          svg {
+            height: 14px;
+            fill: $accent-color;
+          }
+        }
+      }
+      .spawnError {
+        @include flex(row);
+        @include align(center);
+      }
+    }
+  }
+}
+
+/* CONTACT END */
+
+
+
+.navOn {
+  animation: navOn forwards 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.navOff {
+  animation: navOff forwards 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.showDownload {
+  animation: show forwards 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.hideDonwload {
+  animation: hide forwards 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+// 
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  @include flex-important(column);
+}
+
+.active {
+  background: $block-color;
+}
+
+
+.alert {
+  @extend .button-base-md;
+  @include flex(row);
+  @include justify(center);
+  position: fixed;
+  top: -30px;
+  padding: .6rem 1.9rem .6rem 1.1rem;
+  border-radius: 6px;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  opacity: 0;
+  @include for-size(small) {
+    width: 100%;
+    max-width: calc(100% - 30px);
+  }
+  &:hover {
+    box-shadow: none;
+    border: none;
+    cursor: default;
+  }
+}
+
+.alert_validate {
+  @extend .alert;
+  background: $accent-alert-validate-bg;
+  color: $accent-alert-validate;
+
+  i {
+    svg {
+      fill: $accent-alert-validate !important;
+    }
+  }
+}
+
+.alert_warning {
+  @extend .alert;
+  background: $accent-color-bg;
+  color: $accent-color;
+
+  i {
+    svg {
+      fill: $accent-color !important;
+    }
+  }
+}
+
+.spawn_alert {
+  animation: spawnError forwards 400ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.destroy_alert {
+  animation: destroyError forwards 400ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.hover_on_download {
+  border: 2px solid $accent-color !important;
+  transition: all 50ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+
+// loader 
+
+#loader {
+  gap: 5px;
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+  }
+}
+
+
+@keyframes dance {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(20px) scale(1.5);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+$colors: #fb0f4d, #e01558, #ad2070, #8a2a81, #5f3797;
+
+@for $i from 1 through length($colors) {
+  .dot#{$i} {
+    animation-name: dance;
+    animation-duration: 1s;
+    animation-delay: $i * 0.1s;
+    animation-iteration-count: infinite;
+    background-color: nth($colors, $i);
+    animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+  }
+}
+
+.on {
+  @include flex(row);
+  @include align(center);
+  @include justify(center);
+}
+.off {
+  display: none;
+}
+
+.convertOn {
+  visibility: visible;
+}
+.convertOff {
+  visibility: hidden;
+}

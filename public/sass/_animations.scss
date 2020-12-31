@@ -1,0 +1,84 @@
+@keyframes navOn {
+    from {
+        height: 0;
+    }
+    to {
+        height: 160px;
+    }
+}
+@keyframes navOff {
+    from {
+        height: 160px;
+    }
+    to {
+        height: 0;
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);;
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes hide {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+
+// error animation
+
+@keyframes spawnError {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+        display: none;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(80px);
+        @include flex(row);
+    }
+}
+
+
+@keyframes destroyError {
+    from {
+        opacity: 1;
+        transform: translateY(80px);
+        @include flex(row);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50px);
+        display: none;
+    }
+}

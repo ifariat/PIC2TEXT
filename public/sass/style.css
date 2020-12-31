@@ -1,0 +1,1914 @@
+/* Layout */
+/* Input */
+@-webkit-keyframes navOn {
+  from {
+    height: 0;
+  }
+  to {
+    height: 160px;
+  }
+}
+@keyframes navOn {
+  from {
+    height: 0;
+  }
+  to {
+    height: 160px;
+  }
+}
+
+@-webkit-keyframes navOff {
+  from {
+    height: 160px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes navOff {
+  from {
+    height: 160px;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes hide {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+}
+
+@-webkit-keyframes spawnError {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    display: none;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
+  }
+}
+
+@keyframes spawnError {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    display: none;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+}
+
+@-webkit-keyframes destroyError {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    display: none;
+  }
+}
+
+@keyframes destroyError {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(80px);
+            transform: translateY(80px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    display: none;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 6px;
+  background: #212529;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #2b3137;
+  border-radius: 6px;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type=number] {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+.button {
+  padding: .6rem 2rem;
+  border-radius: 6px;
+  color: #c0c0c2;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.button:hover {
+  background-color: #212529;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  line-height: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-moz-selection {
+  background-color: #1a1e23;
+  color: #fff;
+}
+
+::selection {
+  background-color: #1a1e23;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.2rem;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1a1e23;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #c0c0c2;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.2px;
+}
+
+.button-base-md, .button-base-lg, .button-base-sm, .wrapper .container main #b-main__upload #b-main__upload__droparea #underline, main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a, .wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image button, .wrapper .container main #b-main__upload .b-main__upload__convert #convert, .wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a, .wrapper .container main #b-main__output #b-main__output__return button, .wrapper .container footer .b-footer__cards .b-footer__card a, main #b-main__contact__form #b-main__contact__right button, .alert, .alert_validate, .alert_warning {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: #fff;
+  font-size: .78rem;
+  border: 2px solid #3f474e;
+  padding: .5rem 1.1rem;
+  font-weight: bold;
+  background: none;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.button-base-md:hover, .button-base-lg:hover, .button-base-sm:hover, .wrapper .container main #b-main__upload #b-main__upload__droparea #underline:hover, main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a:hover, .wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image button:hover, .wrapper .container main #b-main__upload .b-main__upload__convert #convert:hover, .wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a:hover, .wrapper .container main #b-main__output #b-main__output__return button:hover, .wrapper .container footer .b-footer__cards .b-footer__card a:hover, main #b-main__contact__form #b-main__contact__right button:hover, .alert:hover, .alert_validate:hover, .alert_warning:hover {
+  border: 2px solid #F2166A;
+  -webkit-box-shadow: 0px 0px 20px 0px #a50945;
+          box-shadow: 0px 0px 20px 0px #a50945;
+  cursor: pointer;
+}
+
+.button-base-md i, .button-base-lg i, .button-base-sm i, .wrapper .container main #b-main__upload #b-main__upload__droparea #underline i, main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a i, .wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image button i, .wrapper .container main #b-main__upload .b-main__upload__convert #convert i, .wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a i, .wrapper .container main #b-main__output #b-main__output__return button i, .wrapper .container footer .b-footer__cards .b-footer__card a i, main #b-main__contact__form #b-main__contact__right button i, .alert i, .alert_validate i, .alert_warning i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: .8rem;
+}
+
+.button-base-md i svg, .button-base-lg i svg, .button-base-sm i svg, .wrapper .container main #b-main__upload #b-main__upload__droparea #underline i svg, main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a i svg, .wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image button i svg, .wrapper .container main #b-main__upload .b-main__upload__convert #convert i svg, .wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a i svg, .wrapper .container main #b-main__output #b-main__output__return button i svg, .wrapper .container footer .b-footer__cards .b-footer__card a i svg, main #b-main__contact__form #b-main__contact__right button i svg, .alert i svg, .alert_validate i svg, .alert_warning i svg {
+  height: 14px;
+  fill: #3f474e;
+}
+
+@media (max-width: 767px) {
+  .button-base-md, .button-base-lg, .button-base-sm, .wrapper .container main #b-main__upload #b-main__upload__droparea #underline, main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a, .wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image button, .wrapper .container main #b-main__upload .b-main__upload__convert #convert, .wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a, .wrapper .container main #b-main__output #b-main__output__return button, .wrapper .container footer .b-footer__cards .b-footer__card a, main #b-main__contact__form #b-main__contact__right button, .alert, .alert_validate, .alert_warning {
+    padding: 0.7rem 1.9rem;
+  }
+}
+
+.button-base-lg {
+  padding: 0.8rem 1.5rem;
+}
+
+.button-base-sm, .wrapper .container main #b-main__upload #b-main__upload__droparea #underline, main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a {
+  padding: .2rem 1rem;
+}
+
+.input-base, .wrapper .container main #b-main__upload .b-main__upload__width input, main #b-main__contact__form #b-main__contact__right input,
+main #b-main__contact__form #b-main__contact__right textarea {
+  color: #fff;
+  font-weight: bold;
+  background: #2b3137;
+  border: 2px solid #2b3137;
+  height: 40px;
+  border-radius: 6px;
+  padding: 1.3rem 1rem;
+  cursor: text;
+  font-size: .75rem;
+}
+
+.input-base:hover, .wrapper .container main #b-main__upload .b-main__upload__width input:hover, main #b-main__contact__form #b-main__contact__right input:hover,
+main #b-main__contact__form #b-main__contact__right textarea:hover {
+  cursor: text;
+}
+
+.button-nav, .wrapper .container .b-header .b-header__nav ul li button, .wrapper .container .b-header #mobile ul li button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: .6rem;
+  background: none;
+  border: none;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.button-nav:hover, .wrapper .container .b-header .b-header__nav ul li button:hover, .wrapper .container .b-header #mobile ul li button:hover {
+  background: #212529;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.button-nav svg, .wrapper .container .b-header .b-header__nav ul li button svg, .wrapper .container .b-header #mobile ul li button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Wrapper styles */
+.wrapper {
+  padding-top: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.wrapper .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: calc(100% - 30px);
+  max-width: 1364px;
+  /* HEADER START */
+  /* HEADER END */
+  /* MAIN START */
+  /* MAIN END */
+  /* FOOTER START */
+  /* FOOTER END */
+}
+
+.wrapper .container .b-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .container .b-header .b-header__brand .icon__text {
+  fill: #fff;
+}
+
+.wrapper .container .b-header .b-header__brand .icon svg {
+  width: 100px;
+}
+
+.wrapper .container .b-header .b-header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 570px) {
+  .wrapper .container .b-header .b-header__nav {
+    display: none;
+  }
+}
+
+.wrapper .container .b-header .b-header__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container .b-header .b-header__nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container .b-header .b-header__nav ul li a {
+  color: #fff;
+  padding: .5rem 2rem;
+  margin-left: .6rem;
+  font-size: .78rem;
+  font-weight: bold;
+  border-radius: 6px;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.wrapper .container .b-header .b-header__nav ul li a:hover {
+  background: #2b3137;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.wrapper .container .b-header .b-header__nav ul li button:hover {
+  background: #2b3137;
+}
+
+.wrapper .container .b-header #burger-menu {
+  background: #212529;
+  padding: 0.8rem 0.9rem;
+  display: none;
+  border-radius: 6px;
+}
+
+@media (max-width: 570px) {
+  .wrapper .container .b-header #burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.wrapper .container .b-header #burger-menu svg {
+  width: 22px;
+  fill: #fff;
+}
+
+.wrapper .container .b-header #mobile {
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  display: none;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+@media (max-width: 570px) {
+  .wrapper .container .b-header #mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+}
+
+.wrapper .container .b-header #mobile ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  width: 100%;
+  padding: .5rem;
+  background: #2b3137;
+}
+
+.wrapper .container .b-header #mobile ul li {
+  width: 100%;
+  border-radius: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container .b-header #mobile ul li a {
+  color: #fff;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  padding: .7rem 0;
+}
+
+.wrapper .container .b-header #mobile ul li a:hover {
+  background: #3f474e;
+}
+
+.wrapper .container .b-header #mobile ul li button {
+  border-radius: 6px;
+  width: 100%;
+  margin: 0;
+  height: 41px;
+}
+
+.wrapper .container .b-header #mobile ul li button:hover {
+  background: #3f474e;
+}
+
+.wrapper .container .b-header #mobile ul li svg {
+  width: 10px;
+}
+
+.wrapper .container main {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.wrapper .container main #b-main__upload {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  background: #2b3137;
+  padding: 3rem 2rem;
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 570px) {
+  .wrapper .container main #b-main__upload {
+    padding: 2.5rem 1rem;
+  }
+}
+
+.wrapper .container main #b-main__upload h2 {
+  margin-bottom: 2rem;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea {
+  border-radius: 6px;
+  border: 1px dashed #3f474e;
+  padding: 2rem 0;
+  background: #1a1e23;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #file {
+  display: none;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea .b-main__upload__icon {
+  margin-bottom: 1rem;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea .b-main__upload__icon svg {
+  width: 60px;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #underline {
+  background: #2b3137;
+  border: 2px solid #2b3137;
+  font-weight: bold;
+  margin-top: .4rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #underline:hover {
+  background: #3f474e;
+  border: 2px solid #3f474e;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #or {
+  margin-top: .4rem;
+  color: #3f474e;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea .b-main__upload__button {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea.highlight {
+  border: 1px dashed #F2166A;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #drop_area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image img {
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 100px;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image button {
+  padding: 0.3rem 0.8rem;
+  font-size: 11px;
+  font-weight: bold;
+  background: #59293b;
+  border: 2px solid #59293b;
+  color: #F2166A;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image button:hover {
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.wrapper .container main #b-main__upload #b-main__upload__droparea #temp_image button i svg {
+  fill: #F2166A;
+  -webkit-transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  padding: 0 5px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 140px;
+  margin: 2rem 0;
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__width input {
+  background: #1a1e23;
+  border: 2px solid #3f474e;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__width label {
+  width: 100%;
+  margin-bottom: .6rem;
+  font-size: 12px;
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__width label span {
+  font-size: .8em;
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__width .b-main__upload__width__buttons__container {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__width .b-main__upload__width__buttons__container button {
+  font-size: 1.1rem;
+  width: 30px;
+  height: 30px;
+  background: #3f474e;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  border: 1px solid #3f474e;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  cursor: pointer;
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__width .b-main__upload__width__buttons__container button:hover {
+  border: 1px solid #707070;
+  background: #707070;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__convert #convert {
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__convert #convert:hover {
+  background: #F2166A;
+  -webkit-box-shadow: 0px 0px 20px 0px #a50945;
+          box-shadow: 0px 0px 20px 0px #a50945;
+  border: 2px solid #F2166A;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.wrapper .container main #b-main__upload .b-main__upload__convert #convert:hover svg {
+  fill: #fff !important;
+}
+
+.wrapper .container main #b-main__output {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapper .container main #b-main__output p {
+  margin-bottom: 2rem;
+  font-size: 0.7rem;
+}
+
+.wrapper .container main #b-main__output #b-main__output__block__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-radius: 6px;
+  border: 2px solid #3f474e;
+  padding: .5rem;
+}
+
+@media (max-width: 570px) {
+  .wrapper .container main #b-main__output #b-main__output__block__container {
+    overflow-x: scroll;
+    width: 100%;
+  }
+}
+
+.wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__block {
+  color: #fff;
+  letter-spacing: -.6px;
+  line-height: 0.51rem;
+  position: relative;
+  font-size: 7.6px;
+  -webkit-transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  width: 90%;
+  padding: 2em 4em;
+  background-color: rgba(20, 22, 25, 0.8);
+  position: absolute;
+  z-index: 2;
+}
+
+.wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download h4 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  line-height: 1.3rem;
+  font-size: 14px;
+}
+
+.wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column no-wrap;
+          flex-flow: column no-wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: .5rem;
+  width: 100%;
+}
+
+.wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 150px;
+  background: #3f474e;
+}
+
+@media (max-width: 767px) {
+  .wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a {
+    padding: 0.4rem 0.9rem;
+  }
+}
+
+.wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a svg {
+  fill: #fff !important;
+}
+
+.wrapper .container main #b-main__output #b-main__output__block__container #b-main__output__download .b-main__output__download-container a:hover {
+  background: #F2166A;
+}
+
+.wrapper .container main #b-main__output #b-main__output__return {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.wrapper .container main #b-main__output #b-main__output__return button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto 1.5em;
+}
+
+@media (max-width: 767px) {
+  .wrapper .container main #b-main__output #b-main__output__return button {
+    padding: 0 !important;
+  }
+}
+
+.wrapper .container main #b-main__output #b-main__output__return button svg {
+  fill: #fff !important;
+}
+
+.wrapper .container main #b-main__output #b-main__output__return button i {
+  margin-right: 0 !important;
+}
+
+.wrapper .container main #b-main__output #b-main__output__return img {
+  border-radius: 4px;
+  width: 100%;
+  max-width: 60px;
+}
+
+.wrapper .container footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .wrapper .container footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+}
+
+.wrapper .container footer:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #212529;
+  margin: 2rem 0;
+}
+
+@media (max-width: 570px) {
+  .wrapper .container footer:before {
+    margin: unset;
+    margin-bottom: 2rem;
+  }
+}
+
+.wrapper .container footer .b-footer__brand {
+  width: 30%;
+}
+
+@media (max-width: 767px) {
+  .wrapper .container footer .b-footer__brand {
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-top: 2rem;
+  }
+}
+
+.wrapper .container footer .b-footer__brand .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper .container footer .b-footer__brand .icon svg {
+  fill: #2b3137;
+  width: 100px;
+}
+
+@media (max-width: 767px) {
+  .wrapper .container footer .b-footer__brand .icon svg {
+    width: 50px;
+  }
+}
+
+.wrapper .container footer .b-footer__cards {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media (max-width: 767px) {
+  .wrapper .container footer .b-footer__cards {
+    width: 100%;
+  }
+}
+
+.wrapper .container footer .b-footer__cards .b-footer__card {
+  background: #2b3137;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: calc(50% - 40px);
+  height: 100%;
+  min-height: auto;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+@media (max-width: 767px) {
+  .wrapper .container footer .b-footer__cards .b-footer__card {
+    width: 100%;
+    height: auto;
+    min-height: unset;
+    padding: 2rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .wrapper .container footer .b-footer__cards .b-footer__card p {
+    width: 87%;
+  }
+}
+
+@media (max-width: 767px) and (max-width: 570px) {
+  .wrapper .container footer .b-footer__cards .b-footer__card p {
+    width: unset;
+  }
+}
+
+@media (max-width: 767px) {
+  .wrapper .container footer .b-footer__cards .b-footer__card:nth-child(1) {
+    margin-bottom: 1rem;
+  }
+}
+
+.wrapper .container footer .b-footer__cards .b-footer__card h3 {
+  margin-bottom: 1rem;
+}
+
+.wrapper .container footer .b-footer__cards .b-footer__card p {
+  margin-bottom: 1.3rem;
+}
+
+.wrapper .container footer .b-footer__cards .b-footer__card a:hover svg {
+  fill: #fff;
+}
+
+.wrapper .container footer .b-footer__copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .wrapper .container footer .b-footer__copyright {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.wrapper .container footer .b-footer__copyright:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #212529;
+  margin-top: 2rem;
+}
+
+.wrapper .container footer .b-footer__copyright p {
+  padding: 1rem 0;
+}
+
+/* CONTACT START */
+main #b-main__contact__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+main #b-main__contact__form #b-main__contact__left {
+  width: 40%;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 767px) {
+  main #b-main__contact__form #b-main__contact__left {
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 570px) {
+  main #b-main__contact__form #b-main__contact__left {
+    width: 100%;
+    margin: 0 0 3rem 0;
+  }
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__display {
+  width: 100%;
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__display p {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences p {
+  margin: 1rem 0;
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #212529;
+  margin: 1rem 0;
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a {
+  border-radius: 6px;
+  background: #2b3137;
+  border: 2px solid #2b3137;
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a svg {
+  fill: #3f474e;
+  -webkit-transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a:hover {
+  background: #3f474e;
+  border: 2px solid #3f474e;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences a:hover svg {
+  fill: #fff;
+  -webkit-transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences .developer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 1rem;
+}
+
+@media (max-width: 570px) {
+  main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences .developer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 570px) {
+  main #b-main__contact__form #b-main__contact__left .b-main__contact__left__refrences .source_code {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+main #b-main__contact__form #b-main__contact__right {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 6px;
+  background: #2b3137;
+  padding: 2rem;
+}
+
+@media (max-width: 767px) {
+  main #b-main__contact__form #b-main__contact__right {
+    width: 100%;
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 570px) {
+  main #b-main__contact__form #b-main__contact__right {
+    padding: 1.6rem;
+  }
+}
+
+main #b-main__contact__form #b-main__contact__right input,
+main #b-main__contact__form #b-main__contact__right textarea {
+  background: #1a1e23;
+  border: 2px solid #3f474e;
+  width: 100%;
+}
+
+@media (max-width: 570px) {
+  main #b-main__contact__form #b-main__contact__right input,
+  main #b-main__contact__form #b-main__contact__right textarea {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  main #b-main__contact__form #b-main__contact__right input:nth-child(1) {
+    margin-bottom: 1rem;
+  }
+}
+
+main #b-main__contact__form #b-main__contact__right textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  font-family: inherit;
+  resize: none;
+}
+
+@media (max-width: 767px) {
+  main #b-main__contact__form #b-main__contact__right textarea {
+    margin: 1rem 0;
+  }
+}
+
+main #b-main__contact__form #b-main__contact__right button {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  main #b-main__contact__form #b-main__contact__right button {
+    margin-top: 1.5rem;
+  }
+}
+
+main #b-main__contact__form #b-main__contact__right button:hover {
+  background: #F2166A;
+}
+
+main #b-main__contact__form #b-main__contact__right button:hover svg {
+  fill: #fff !important;
+}
+
+main #b-main__contact__form #b-main__contact__right .b-main__contact__right_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 48%;
+  position: relative;
+}
+
+@media (max-width: 1025px) {
+  main #b-main__contact__form #b-main__contact__right .b-main__contact__right_input {
+    width: 100%;
+  }
+  main #b-main__contact__form #b-main__contact__right .b-main__contact__right_input:nth-child(2) {
+    margin-top: 3rem;
+  }
+}
+
+main #b-main__contact__form #b-main__contact__right .b-main__contact__right_input label {
+  margin-bottom: .7rem;
+  font-size: .78rem;
+}
+
+main #b-main__contact__form #b-main__contact__right .b-main__contact__right_input:nth-child(3) {
+  width: 100%;
+  margin: 3rem 0;
+}
+
+main #b-main__contact__form #b-main__contact__right .field_error {
+  display: none;
+  position: relative;
+  padding: .4em 1.6em .4em .9em;
+  font-size: .9em;
+  background: #59293b;
+  color: #F2166A;
+  position: absolute;
+  bottom: -40px;
+  border-radius: 6px;
+  margin-top: .7rem;
+}
+
+main #b-main__contact__form #b-main__contact__right .field_error .field_error_arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #59293b;
+  position: absolute;
+  top: -5px;
+  left: 18px;
+}
+
+main #b-main__contact__form #b-main__contact__right .field_error i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: .2rem;
+}
+
+main #b-main__contact__form #b-main__contact__right .field_error i svg {
+  height: 14px;
+  fill: #F2166A;
+}
+
+main #b-main__contact__form #b-main__contact__right .spawnError {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* CONTACT END */
+.navOn {
+  -webkit-animation: navOn forwards 300ms cubic-bezier(0.87, 0, 0.13, 1);
+          animation: navOn forwards 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.navOff {
+  -webkit-animation: navOff forwards 300ms cubic-bezier(0.87, 0, 0.13, 1);
+          animation: navOff forwards 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.showDownload {
+  -webkit-animation: show forwards 100ms cubic-bezier(0.87, 0, 0.13, 1);
+          animation: show forwards 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.hideDonwload {
+  -webkit-animation: hide forwards 100ms cubic-bezier(0.87, 0, 0.13, 1);
+          animation: hide forwards 100ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-flow: column wrap !important;
+          flex-flow: column wrap !important;
+}
+
+.active {
+  background: #2b3137;
+}
+
+.alert, .alert_validate, .alert_warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: -30px;
+  padding: .6rem 1.9rem .6rem 1.1rem;
+  border-radius: 6px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: center;
+  opacity: 0;
+}
+
+@media (max-width: 570px) {
+  .alert, .alert_validate, .alert_warning {
+    width: 100%;
+    max-width: calc(100% - 30px);
+  }
+}
+
+.alert:hover, .alert_validate:hover, .alert_warning:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  cursor: default;
+}
+
+.alert_validate {
+  background: #295934;
+  color: #16f25b;
+}
+
+.alert_validate i svg {
+  fill: #16f25b !important;
+}
+
+.alert_warning {
+  background: #59293b;
+  color: #F2166A;
+}
+
+.alert_warning i svg {
+  fill: #F2166A !important;
+}
+
+.spawn_alert {
+  -webkit-animation: spawnError forwards 400ms cubic-bezier(0.87, 0, 0.13, 1);
+          animation: spawnError forwards 400ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.destroy_alert {
+  -webkit-animation: destroyError forwards 400ms cubic-bezier(0.87, 0, 0.13, 1);
+          animation: destroyError forwards 400ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.hover_on_download {
+  border: 2px solid #F2166A !important;
+  -webkit-transition: all 50ms cubic-bezier(0.87, 0, 0.13, 1);
+  transition: all 50ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+#loader {
+  gap: 5px;
+}
+
+#loader .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+}
+
+@-webkit-keyframes dance {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  50% {
+    -webkit-transform: translateY(20px) scale(1.5);
+            transform: translateY(20px) scale(1.5);
+  }
+  100% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes dance {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  50% {
+    -webkit-transform: translateY(20px) scale(1.5);
+            transform: translateY(20px) scale(1.5);
+  }
+  100% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+}
+
+.dot1 {
+  -webkit-animation-name: dance;
+          animation-name: dance;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-color: #fb0f4d;
+  -webkit-animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+          animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.dot2 {
+  -webkit-animation-name: dance;
+          animation-name: dance;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-color: #e01558;
+  -webkit-animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+          animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.dot3 {
+  -webkit-animation-name: dance;
+          animation-name: dance;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-color: #ad2070;
+  -webkit-animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+          animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.dot4 {
+  -webkit-animation-name: dance;
+          animation-name: dance;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-color: #8a2a81;
+  -webkit-animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+          animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.dot5 {
+  -webkit-animation-name: dance;
+          animation-name: dance;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  background-color: #5f3797;
+  -webkit-animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+          animation-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.off {
+  display: none;
+}
+
+.convertOn {
+  visibility: visible;
+}
+
+.convertOff {
+  visibility: hidden;
+}
+/*# sourceMappingURL=style.css.map */
