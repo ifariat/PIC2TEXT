@@ -15,3 +15,5 @@ The user has the choice betweeen two kinds of outputs, a text file ".txt" and a 
 # EXAMPLES
 
 ![Screenshot](https://raw.githubusercontent.com/ifariat/PIC2TEXT/master/examples/image_generated_by_pic2text515.jpg)
+![Screenshot](https://raw.githubusercontent.com/ifariat/PIC2TEXT/master/examples/image_generated_by_pic2text516.jpg)
+![Screenshot](https://raw.githubusercontent.com/ifariat/PIC2TEXT/master/examples/image_generated_by_pic2text515.jpg)
